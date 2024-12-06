@@ -74,7 +74,7 @@ func Test_TokenService(t *testing.T) {
 }
 ```
 
-bagaimana kalau kita balik pendekatannya dalam membuat API, kita cukup menulis implementasinya (concrete) saja tanpa repot-repot mikirin interface (abstract) apa yang musti kita expose ke pemakai
+sungguh pegal badan rasanya. bagaimana kalau kita balik pendekatannya dalam membuat API, kita cukup menulis implementasinya (concrete) saja tanpa repot-repot mikirin interface (abstract) apa yang musti kita expose ke pemakai
 
 kita bebaskan pengguna API untuk menulis interface yang mereka butuhkan saja ke package implementasi API seperti ini:
 
@@ -93,7 +93,7 @@ type Dependency interface {
 }
 ```
 
-dan
+dan mengubah dependencynya untuk menggunakan interface yang kita buat
 
 ```go
 type TokenService struct {
@@ -134,3 +134,7 @@ func Test_TokenService(t *testing.T) {
 ```
 
 apakah "implementasi" dari interface di Golang lebih bagus dari C++ dan/atau Java? gatau, gue sendiri masih belum paham banget motivasi dibalik kenapa golang memilih cara seperti ini
+
+sumber untuk belajar mengapa bisa seperti itu di Golang: https://www.airs.com/blog/archives/277
+
+kode dari thread ini bisa diakses di: https://github.com/bahrunnur/golang-interface-weblog
